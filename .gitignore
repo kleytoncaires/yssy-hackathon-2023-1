@@ -172,4 +172,8 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/node,nextjs
+=======
+# End of https://www.toptal.com/developers/gitignore/api/node,nextjs
+>>>>>>> 21d1a5cc1797c4be1320a3c4e1954c1751d0c1cd
