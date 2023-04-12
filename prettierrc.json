@@ -1,0 +1,15 @@
+{
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "generatorStarSpacing": true,
+  "offsetTernaryExpressions": true,
+  "printWidth": 110,
+  "quoteProps": "consistent",
+  "semi": false,
+  "singleQuote": true,
+  "spaceBeforeFunctionParen": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "yieldStarSpacing": true
+}
