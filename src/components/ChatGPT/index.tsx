@@ -1,40 +1,30 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-
-interface Response {
-	message: string;
-}
+import api from 'api';
+import { useState } from 'react';
 
 const ChatGPT = () => {
-	const [message, setMessage] = useState('');
+	const [inputText, setInputText] = useState('');
+	const [responseText, setResponseText] = useState('');
 
-	useEffect(() => {
-		axios
-			.get<Response>(
-				'https://api.openai.com/v1/engines/davinci/completions',
-				{
-					headers: {
-						'Content-Type': 'application/json',
-						Authorization: `Bearer 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
-`,
-					},
-					params: {
-						prompt: 'Hello',
-						max_tokens: 5,
-					},
-				}
-			)
-			.then((response) => {
-				setMessage(response.data.message);
-			})
-			.catch((error) => {
-				console.error(error);
+	const generateResponse = async () => {
+		try {
+			const response = await api.post('/chat/generate', {
+				input_text: inputText,
 			});
-	}, []);
+			setResponseText(response.data.generated_text);
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
 	return (
 		<div>
-			<p>{message}</p>
+			<input
+				type='text'
+				value={inputText}
+				onChange={(e) => setInputText(e.target.value)}
+			/>
+			<button onClick={generateResponse}>Generate Response</button>
+			<p>{responseText}</p>
 		</div>
 	);
 };
