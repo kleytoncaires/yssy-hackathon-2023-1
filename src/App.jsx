@@ -4,16 +4,17 @@ import { Box } from "@mui/material";
 import { useState } from 'react';
 import Logo from "/images/logos/logomarca_negativo.svg";
 
-const API_KEY = "";
+const API_KEY = "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";
 // "Explain things like you would to a 10 year old learning how to code."
 const systemMessage = { //  Explain things like you're talking to a software professional with 5 years of experience.
-  "role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."
+  "role": "system", "content": "Você é o Fredinho, um grande modelo de linguagem treinado pelo SOC da Yssy"+
+  "Responda as perguntas da forma mais completa possível."
 }
 
 function App() {
   const [messages, setMessages] = useState([
     {
-      message: "Olá, eu sou o Fredinho! pergunte-me qualquer coisa!",
+      message: "Olá, eu sou o Fredinho! Como posso te ajudar?",
       sentTime: "just now",
       sender: "ChatGPT"
     }
@@ -59,7 +60,25 @@ function App() {
     const apiRequestBody = {
       "model": "gpt-3.5-turbo",
       "messages": [
-        systemMessage,  // The system message DEFINES the logic of our chatGPT
+        systemMessage,
+        {"role": "user", "content": "O que é a Yssy"},  // The system message DEFINES the logic of our chatGPT
+        {"role": "assistant", "content": "A Yssy é a maior plataforma de tecnogia do Brasil"},
+        {"role": "user", "content": "O que a Yssy faz?"},
+        {"role": "assistant", "content": "A yssy possuí BUs de cibersegurança, Cloud Digital Application, Dados e Analytics, Desenvolvimento, Infraestrutura, Serviços gerenciados"},
+        {"role": "user", "content": "Quais serviços a BU de Dados e Analytics oferece?"},
+        {"role": "assistant", "content": "A BU de Dados e Analytics oferece serviços de BI, provendo integração de dados Unicação dos Dados e Dashboards"},
+        {"role": "user", "content": "Quais serviços a BU de Dados e Analytics oferece?"},
+        {"role": "assistant", "content": "A BU de Dados e Analytics oferece serviços de engenharia de dados, provendo Data Lake, Delta Lake House e Pipeline de dados"},
+        {"role": "user", "content": "Quais serviços a BU de Dados e Analytics oferece?"},
+        {"role": "assistant", "content": "A BU de Dados e Analytics oferece serviços de Governança de Dados, provendo Virtualização de dados, Gerenciamento de dados, catálogo de dados."},
+        {"role": "user", "content": "Quais serviços a BU de Dados e Analytics oferece?"},
+        {"role": "assistant", "content": "A BU de Dados e Analytics oferece serviços de Data Science, provendo Machine Learning, MLOps e AI."},
+        {"role": "user", "content": "Quais serviços a BU de Serviços Gerenciados oferece?"},
+        {"role": "assistant", "content": "A BU de Serviços Gerenciados oferece serviços de ESM(Enterprise Service Manager), provendo IT Business Management(ITBM), IT Services Management(ITSM),HR & Employee Delivery(HRSM), Customer Service Management(CSM), Field Service Management(FSM) e AppEngine/DevOps"},
+        {"role": "user", "content": "Quais serviços a BU de Serviços Gerenciados oferece?"},
+        {"role": "assistant", "content": "A BU de Serviços Gerenciados oferece serviços de GRC(Governance, Risk and Compliance) provendo Security Operations(SecOps), Risk Security(IRM), Vendor Management, Identity and Access (IDM/IGA/PAM), Process Mining / Task Mining / RPA, Workload / Task Automation(SOAP)"},
+        {"role": "user", "content": "Quais serviços a BU de Serviços Gerenciados oferece?"},
+        {"role": "assistant", "content": "A BU de Serviços Gerenciados oferece serviços de ITOM(Operations Manager) provendo Telemetria e Monitoração(AIOPS), Telecom and Networking(ETOM/NPM), IT Asset Management(ITAM), Sofware Asset Management(SAM), Hardware Asset Management(HAM), Unified Endpoint Management(UEM)"},
         ...apiMessages // The messages from our chat with ChatGPT
       ]
     }
