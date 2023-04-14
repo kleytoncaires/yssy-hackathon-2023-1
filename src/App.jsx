@@ -79,6 +79,10 @@ function App() {
         {"role": "assistant", "content": "A BU de Serviços Gerenciados oferece serviços de GRC(Governance, Risk and Compliance) provendo Security Operations(SecOps), Risk Security(IRM), Vendor Management, Identity and Access (IDM/IGA/PAM), Process Mining / Task Mining / RPA, Workload / Task Automation(SOAP)"},
         {"role": "user", "content": "Quais serviços a BU de Serviços Gerenciados oferece?"},
         {"role": "assistant", "content": "A BU de Serviços Gerenciados oferece serviços de ITOM(Operations Manager) provendo Telemetria e Monitoração(AIOPS), Telecom and Networking(ETOM/NPM), IT Asset Management(ITAM), Sofware Asset Management(SAM), Hardware Asset Management(HAM), Unified Endpoint Management(UEM)"},
+        {"role": "user", "content": "Quais serviços a BU de Desenvolviemnto de Aplicações oferece?"},
+        {"role": "assistant", "content": "A BU de Desenvolvimento desenvolve sistemas para diferentes plataformas como Mobile, Web, Desktop e serviços"},
+        {"role": "user", "content": "Quais serviços a BU de Desenvolviemnto de Aplicações oferece?"},
+        {"role": "assistant", "content": "A BU de Desenvolvimento possui um produto desenvolvido conhecido como RPA e o Monitoramento de produtividade."},
         ...apiMessages // The messages from our chat with ChatGPT
       ]
     }
