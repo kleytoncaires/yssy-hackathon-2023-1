@@ -4,17 +4,17 @@ import { Box } from "@mui/material";
 import { useState } from 'react';
 import Logo from "/images/logos/logomarca_negativo.svg";
 
-const API_KEY = "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";
+const API_KEY = "";
 // "Explain things like you would to a 10 year old learning how to code."
 const systemMessage = { //  Explain things like you're talking to a software professional with 5 years of experience.
-  "role": "system", "content": "Você é o Fredinho, um grande modelo de linguagem treinado pelo SOC da Yssy"+
+  "role": "system", "content": "Você é o Fred, um grande modelo de linguagem treinado pelo SOC da Yssy"+
   "Responda as perguntas da forma mais completa possível."
 }
 
 function App() {
   const [messages, setMessages] = useState([
     {
-      message: "Olá, eu sou o Fredinho! Como posso te ajudar?",
+      message: "Olá, eu sou o Fred! Como posso te ajudar?",
       sentTime: "just now",
       sender: "ChatGPT"
     }
@@ -85,10 +85,14 @@ function App() {
         {"role": "assistant", "content": "A BU de Desenvolvimento possui um produto desenvolvido conhecido como RPA e o Monitoramento de produtividade."},
         {"role": "user", "content": "Quais são os parceiros da yssy?"},
         {"role": "assistant", "content": "Os parceiros da yssy são AppDynamics, Cisco, Datadog, Exabeam, Imperva, ServiceNow, BMC, Entuity, HashiCorp, Lacework, Microsoft, Pure Storage, Quest, Solarwinds, Sophos, Splunk, Thales, TIBCO, VMWare, Zscaler, Aruba, Anomali, BigID, Cloudera, COMMVault, Alhua, Datarobot, DellTechnologies, Forcepoint, Fortinet, Furukawa, Gigamon, Harness, Hewlett Packard Enterprise, Logitech, McAfee, MicroStategy, Ngena, Nutani, SentinelOne, Sonicwall, Tenable, Veeam, Veracode, Zoom, ActiveNav, Agilis, Alcatel-Lucent, AlgoSec, Allot, Assa Abloy, AWS, Axis, Axur, Axxonsoft, Azion, BeyondTrust, BrasilSat, Ceragon, CleanCloud, CoffeeBean, Comtech, Databricks, Drixit, Edge-core, Exagrid, Fortra, Grafana, Hexagon, HIKVISION, Hispamar, ID Essentials, Intelsat, L5 Networks, Lenovo, LGPD Now, Micro Focus, Netskope, Nexans, NSfocus, Oracle, Park Place, PhishX, Picus, Poly, Positivo, PRTG Netowrk Monitor, Qlik, Radware, Rocket.chat, Salt, Snow, ST Engineering, Suse, Tidal, W3SAT, Zebra, Zerum"},
-        {"role": "user", "content": "Quais os líderes da Yssy?"},
-        {"role": "assistant", "content": "Frederico Samartini: Chief Executive Officer, Gabrielly Nagy Diretora, Financeira Bacharel em Ciências Contábeis, MBA em Auditoria, Controladoria e Perícia pela Faculdade de Telêmaco Borba, tem mais de 12 anos de sólida experiência tributária, tendo atuado em consultorias e empresas de grande porte. Alexandre Brito, Superintendente de Aplicações e Dados, Especializado em projetos de Desenvolvimento de Aplicações e de Business Intelligence, atuando em TI a mais de 18 anos sendo os últimos 12 focado em gestão de projetos e equipes técnicas. Certificado em gestão utilizando métodos ágeis, atuando sempre com foco no atendimento às necessidades de negócio dos clientes. Cláudia Sprackling, Diversidade e Sustentabilidade, Bacharel em Letras com pós-graduação em Tradução nos idiomas Português e Inglês pela Universidade de São Paulo, tem mais de 20 anos de experiência em empresas multinacionais nos setores de tecnologia e direito internacional. Na Yssy, é frente de diversidade, integração e sustentabilidade, liderando equipes e projetos voltados para o propósito da companhia. Diego Nobre, Chief Transformation Officer Analista de sistemas e redes de computadores, ITIL Expert V3 e especialista certificado nas soluções BMC Software. Mais de 15 anos de experiência trabalhando com Gestão de TI, Transformação Digital e Gestão de Operações de TI. Responsável por diversos cases de sucesso em projetos de ITSM por todo o país. Hiroshi Liberal Ferreira Kanegae, Superintendente Comercial | Regional Distrito Federal Engenheiro em Redes de Comunicação pela Universidade de Brasília, MBA em Governança em TI pela Fundação Universa. Mais de 17 anos atuando no setor de tecnologia como: Telecomunicações, Data Center, Redes Corporativas, Cyber Segurança, entre outros. Adilson Hideki, Líder de Business Intelligence (BI) e Analytics Arquiteto de Soluções que envolvam Dados como: Business Intelligence, Data Warehouse, Bancos de Dados, Tuning de Bancos de Dados (performance), ETL, Desenvolvimento de Aplicativos com Microsoft.Net, Java e Data Science Analytics com Python e R. MBA em Arquitetura de Bancos de Dados na FIAP. Trabalho desde 1999 como consultor principalmente nos seguintes setores: Financeiro, Telecom e Varejo. Douglas Koja, Líder Engenharia em Comunicação e Colaboração Formação em  Engenharia Eletrônica pela Escola de Engenharia Mauá, com pós graduação em Gestão de Projetos, mais de 15 anos de experiência ecom especialização em tecnologia de Redes e soluções de Comunicação Unificada e Colaboração. Edvan Trajano, Líder de Infraestrutura de Rede Lógica, Elétrica e Cabeamento Estruturado Formação em Engenharia Elétrica, atua com Infraestrutura de Rede Lógica, Elétrica e Cabeamento Estruturado a mais de 7 anos, com desenvolvimento de soluções e implantação de projetos de cabeamento metálico, back bone óptico e redes PON (Passive Optical Network), Roberto Martins, Consultor de Soluções em Business Intelligence (BI) e Analytics Especialista em soluções de software para negócio e Processamento de dados pela Univ. Presbiteriana Mackenzie, especialista em metodologia de software SEI (Software Engineering Institute) da Universidade Carnegie Mellon, com mais de 25 anos de atuação em Consultoria de desenvolvimento de sistemas e dados. Josiane Barros, CISO(Chief Information Security Officer)"},
         {"role": "user", "content": "A yssy possui profissionais qualificados?"},
         {"role": "assistant", "content": "Sim, a yssy possui a maior quantidade e prossionais qualificados e certificados do Brasil"},
+        {"role": "user", "content": "Quais os líderes da Yssy?"},
+        {"role": "assistant", "content": "CEO: Frederico Samartini, CFO: Gabrielly Andressa Nagy, Compliance Officer: Vanderson Leite Cavalcanti, CISO: Josiane de Barros Silva, Gerente de Inteligência Comercial e Alianças: Cassia Regina Caldas Mack"},
+        {"role": "user", "content": "Onde a yssy está localizada?"},
+        {"role": "assistant", "content": "A Matriz da yssy se encontra em Alphaville, na cidade de Barueri no estado de São Paulo, na alameda rio negro 500, torre b andar 21. Também possui um escritório no Ágora Tech Park em Joinville"},
+        {"role": "user", "content": "A yssy é um bom lugar para se trabalhar?"},
+        {"role": "assistant", "content": "A Yssy é um excelente lugar para se trabalhar, possue a o selo Great Place To Work(GPTW), dado às empresas pelo reconhecimento na qualidade do ambiente empresarial"},
         ...apiMessages // The messages from our chat with ChatGPT
       ]
     }
@@ -132,7 +136,7 @@ function App() {
                 return <Message key={i} model={message} />
               })}
             </MessageList>
-            <MessageInput placeholder="Digite a mensagem aqui" onSend={handleSend} />        
+            <MessageInput attachButton={false} placeholder="Digite a mensagem aqui" onSend={handleSend} />        
           </ChatContainer>
         </MainContainer>
         </Box>
