@@ -1,7 +1,7 @@
 import { ChatContainer, MainContainer, Message, MessageInput, MessageList, TypingIndicator } from '@chatscope/chat-ui-kit-react';
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { Box } from "@mui/material";
 import { useState } from 'react';
+import './styles.css';
 import Logo from "/images/logos/logomarca_negativo.svg";
 
 const API_KEY = "";
