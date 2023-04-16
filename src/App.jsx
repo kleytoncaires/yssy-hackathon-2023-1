@@ -6,10 +6,9 @@ import Logo from "/images/logos/logomarca_negativo.svg";
 
 const API_KEY = "";
 // "Explain things like you would to a 10 year old learning how to code."
-const systemMessage = { //  Explain things like you're talking to a software professional with 5 years of experience.
-  "role": "system", "content": "Você é o Fred, um grande modelo de linguagem treinado pelo SOC da Yssy"+
-  "Responda as perguntas da forma mais completa possível."
-}
+const systemMessage = {//  Explain things like you're talking to a software professional with 5 years of experience.
+"role": "system", "content": "Você é o Fred, um grande modelo de linguagem treinado pelo SOC da Yssy, você irá responder perguntas sobre yssy e seus serviços, sempre que te perguntarem coisas que não tem haver com a yssy você irá responder que apenas conhece sobre assuntos da Yssy"}
+  
 
 function App() {
   const [messages, setMessages] = useState([
@@ -62,9 +61,9 @@ function App() {
       "messages": [
         systemMessage,
         {"role": "user", "content": "O que é a Yssy"},  // The system message DEFINES the logic of our chatGPT
-        {"role": "assistant", "content": "A Yssy é a maior plataforma de tecnogia do Brasil"},
-        {"role": "user", "content": "O que a Yssy faz?"},
-        {"role": "assistant", "content": "A yssy possuí BUs de cibersegurança, Cloud Digital Application, Dados e Analytics, Desenvolvimento, Infraestrutura, Serviços gerenciados"},
+        {"role": "assistant", "content": "A Yssy é a maior plataforma de tecnologia do Brasil, onde atua no modelo B2B, ofereçendo uma alta diversidade de serviços de tecnologia"},
+        {"role": "user", "content": "Quais são as Business Units (BUs) da Yssy?"},
+        {"role": "assistant", "content": "A Yssy possuí BUs de cybersegurança, Cloud Digital Application, Dados e Analytics, Desenvolvimento, Infraestrutura, Serviços gerenciados"},
         {"role": "user", "content": "Quais serviços a BU de Dados e Analytics oferece?"},
         {"role": "assistant", "content": "A BU de Dados e Analytics oferece serviços de BI, provendo integração de dados Unicação dos Dados e Dashboards"},
         {"role": "user", "content": "Quais serviços a BU de Dados e Analytics oferece?"},
@@ -88,11 +87,20 @@ function App() {
         {"role": "user", "content": "A yssy possui profissionais qualificados?"},
         {"role": "assistant", "content": "Sim, a yssy possui a maior quantidade e prossionais qualificados e certificados do Brasil"},
         {"role": "user", "content": "Quais os líderes da Yssy?"},
-        {"role": "assistant", "content": "CEO: Frederico Samartini, CFO: Gabrielly Andressa Nagy, Compliance Officer: Vanderson Leite Cavalcanti, CISO: Josiane de Barros Silva, Gerente de Inteligência Comercial e Alianças: Cassia Regina Caldas Mack"},
+        {"role": "user", "content": "Quem são os líderes da Yssy?"},
+        {"role": "assistant", "content": "Frederico Samartini - Chief Executive Officer,Gabrielly Nagy - Diretora Financeira, Alexandre Brito - Superintendente de Aplicações e Dados, Josiane Barros - Chief Information Security Officer, Cláudia Sprackling - Diversidade e Sustentabilidade, Diego Nobre - Chief Transformation Officer,'Hiroshi Liberal Ferreira Kanegae - Superintendente Comercial | Regional Distrito Federal, Adilson Hideki - Líder de Business Intelligence (BI) e Analytics,Douglas Koja - Líder Engenharia em Comunicação e Colaboração, Edvan Trajano - Líder de Infraestrutura de Rede Lógica, Elétrica e Cabeamento Estruturado, Roberto Martins - Consultor de Soluções em Business Intelligence (BI) e Analytics, Antonio Buzatto - Líder Telecomunicações"},
         {"role": "user", "content": "Onde a yssy está localizada?"},
-        {"role": "assistant", "content": "A Matriz da yssy se encontra em Alphaville, na cidade de Barueri no estado de São Paulo, na alameda rio negro 500, torre b andar 21. Também possui um escritório no Ágora Tech Park em Joinville"},
+        {"role": "assistant", "content": "A Matriz da yssy se encontra em Alphaville, na cidade de Barueri no estado de São Paulo, na alameda rio negro 500, torre b anda  r 21. Também possui um escritório no Ágora Tech Park em Joinville"},
         {"role": "user", "content": "A yssy é um bom lugar para se trabalhar?"},
         {"role": "assistant", "content": "A Yssy é um excelente lugar para se trabalhar, possue a o selo Great Place To Work(GPTW), dado às empresas pelo reconhecimento na qualidade do ambiente empresarial"},
+        {"role": "user", "content": "Quais serviços a BU de Cybersegurança e Privacidade de dados oferece?"},
+        {"role": "assistant", "content": "A BU de Cybersegurança e Privacidade de dados oferece serviços e produtos variados, como Pentest, Gestão de Vulnerabilidades, Suporte, Manutenção e Monitoramento de Soluções de cybersegurança, Avaliação e Assessment do cenário atual do client(Cyber Diagnosis), Serviços de SOC(Security Operations Center), Monitoramento e Resposta a incidentes, produtos de AppSec como SAST(Análise estática do código), DAST(Análise dinâmica do código, SCA, WAF(Web Application Firewall, CDN(Content delivery network), consultoria, Threat intelligence, Segurança em nuvem, Criptografia e dados, Endpoint security(XDR,EDR,NDR),Firewall, IPS,Network Security,DNS Security, MFA, Gestão de acesso e identidade(IAM), Data discovery, Cloud Security Posture Management(CSPM), Cloud Workload Protection Platform(CWPP), Proteção de vazamento de dados(DLP), Serviços anti fraudes digitais."},
+        {"role": "user", "content": "Quais certificações a Yssy possue?"},
+        {"role": "assistant", "content": "A yssy é certificada pelas normas interncionais ISO9000, ISO14000, ISO20000, ISO27001, ISO27701 e IS037000, além de ser uma empresa Selo B"},
+        {"role": "user", "content": "Quantos funcionários a yssy possue?"},
+        {"role": "assistant", "content": "A yssy possue mais de 200 funcionários altamente capacitados em diversas áreas."},
+        
+
         ...apiMessages // The messages from our chat with ChatGPT
       ]
     }
@@ -129,7 +137,7 @@ function App() {
           <ChatContainer>       
             <MessageList 
               scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="ChatGPT está digitando" /> : null}
+              typingIndicator={isTyping ? <TypingIndicator content="Fred está digitando" /> : null}
             >
               {messages.map((message, i) => {
                 console.log(message)
