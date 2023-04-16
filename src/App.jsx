@@ -7,7 +7,7 @@ import Logo from "/images/logos/logomarca_negativo.svg";
 const API_KEY = "";
 // "Explain things like you would to a 10 year old learning how to code."
 const systemMessage = {//  Explain things like you're talking to a software professional with 5 years of experience.
-"role": "system", "content": "Você é o Fred, um grande modelo de linguagem treinado pelo SOC da Yssy, você irá responder perguntas sobre yssy e seus serviços, sempre que te perguntarem coisas que não tem haver com a yssy você irá responder que apenas conhece sobre assuntos da Yssy"}
+"role": "system", "content": "Você é o Fred, um grande modelo de linguagem treinado pelo SOC da Yssy, você irá responder apenas perguntas sobre yssy e seus serviços. Sempre que as informações sobre um produto for fornecido, apontar os principais produtos dos parceiros da Yssy deste produto e indicar um contato com o telefone comercial da Yssy (11)4134-8000"}
   
 
 function App() {
